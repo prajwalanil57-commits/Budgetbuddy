@@ -28,6 +28,9 @@ python -m unittest
 | `tests/test_core.py` | Example tests to copy from |
 
 ## Team
+- Prajwal (building BudgetBuddy)
+```
+
 
 <!-- Add yourself here on your Git lesson: - Your Name (role) -->
 
