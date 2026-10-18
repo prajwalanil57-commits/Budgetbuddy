@@ -38,6 +38,7 @@ def last_transaction(transactions):
 
 
 def total_spent(transactions):
+    """Return the total sum of all negative transaction amounts in the given transactions list."""
     return round(sum(-t["amount"] for t in transactions if t["amount"] < 0), 2)
 
 
