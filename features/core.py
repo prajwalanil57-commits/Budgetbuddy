@@ -28,13 +28,15 @@ def transactions_by_category(transactions, category):
 def count_by_category(transactions):
     counts = {}
     for t in transactions:
-        name = t["catagory"]
+        name = t["category"]
         counts[name] = counts.get(name, 0) + 1
     return counts
 
 
 def last_transaction(transactions):
-    return transactions[len(transactions)]
+    if not transactions:
+        return None
+    return transactions[len(transactions)- 1]
 
 
 def total_spent(transactions):
