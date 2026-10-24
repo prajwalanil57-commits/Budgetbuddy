@@ -1,4 +1,7 @@
 """Example tests for BudgetBuddy. Two small tests to copy from in Lesson 12."""
+import unittest
+
+from features import reports
 
 import unittest
 
@@ -19,6 +22,14 @@ class TestCore(unittest.TestCase):
         self.assertEqual(tx["id"], 2)
         self.assertEqual(len(data["transactions"]), 2)
 
+class TestAverageBalance(unittest.TestCase):
+    def test_empty_history_is_zero(self):
+        data = {"history": []}
+        self.assertEqual(reports.average_balance(data), 0.0)
+
+    def test_average_balance_calculation(self):
+        data = {"history": [10, 20, 30]}
+        self.assertEqual(reports.average_balance(data), 20.0)
 
 if __name__ == "__main__":
     unittest.main()
