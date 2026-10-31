@@ -45,3 +45,7 @@ def average_transaction(transactions):
     if not transactions:
         return 0
     return round(sum(t["amount"] for t in transactions) / len(transactions), 2)
+
+def search_transactions(transactions, keyword):
+    """Returns transactions matching a description keyword."""
+    return [t for t in transactions if keyword.lower() in t.get("description", "").lower()]

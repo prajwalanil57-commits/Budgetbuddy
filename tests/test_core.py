@@ -19,6 +19,11 @@ class TestCore(unittest.TestCase):
         self.assertEqual(tx["id"], 2)
         self.assertEqual(len(data["transactions"]), 2)
 
+    def test_search_transactions(self):
+        sample = [{"description": "Groceries"}, {"description": "Gas"}]
+        result = core.search_transactions(sample, "groc")
+        self.assertEqual(len(result), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
