@@ -4,8 +4,16 @@ A small spending/allowance tracker you run in the terminal. Add transactions,
 list them, and see your balance. This is your squad's starting product for
 Elite 101 - you'll grow it one ticket at a time.
 
-## Run it
+## Features
+- Add and categorize transactions
+- Filter and search transaction history
+- View real-time expense totals
 
+## How to Run
+1. Open the project in VS Code or GitHub Codespaces.
+2. Run `python app.py` (or start your development server).
+3. Open `http://localhost:5000` in your browser.
+4. 
 ```bash
 python main.py
 ```
