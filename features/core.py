@@ -15,7 +15,6 @@ def add_transaction(data, description, amount, category="general"):
 def balance(data):
     return round(data["starting_balance"] + sum(t["amount"] for t in data["transactions"]), 2)
 
-
 def list_transactions(transactions, show=print):
     for t in transactions:
         show(str(t["id"]) + ". " + t["description"] + " (" + str(t["amount"]) + ")")
