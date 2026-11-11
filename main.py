@@ -44,8 +44,8 @@ def main():
             storage.save_data(data)
             print("Transaction added.")
         elif choice == "4":
-            category = input("Category: ").strip()
-            matches = core.transactions_by_category(core.get_transactions(data), category)
+            category = input("Category: ").strip().lower()
+            matches = [t for t in core.get_transactions(data) if category in t.get("description", "").lower() or category in t.get("category", "").lower()]
             for t in matches:
                 print("- " + t["description"])
         elif choice == "5":
